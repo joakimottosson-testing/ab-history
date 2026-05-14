@@ -603,5 +603,18 @@ button:first-of-type {
 }
 </style>
 
+<script>
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const runButton = [...document.querySelectorAll("button")]
+            .find(btn => btn.textContent.includes("Kör"));
+
+        if (runButton) {
+            runButton.click();
+        }
+    }, 500);
+});
+</script>
+
 </body>
 </html>
